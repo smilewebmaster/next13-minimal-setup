@@ -1,0 +1,36 @@
+/**
+ * BEGIN
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 15px;
+}
+
+button {
+  all: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  @layer components {
+    body {
+      @apply 
+        bg-black 
+        text-white
+        p-5
+        space-y-5
+    }
+  }  
+}
+
+/**
+ * END
+ */
