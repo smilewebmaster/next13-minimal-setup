@@ -2,7 +2,7 @@
  * BEGIN
  */
 
-export { randomId } from 'random-id';
+export { randomId } from 'randomId';
 export { delay } from 'delay';
 
 /**

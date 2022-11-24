@@ -2,14 +2,14 @@
  * BEGIN
  */
 
-import { TRPCSwr } from 'core/components/trpc-swr';
 import { Fragment } from 'react';
+import { UserList } from 'users/components/userList';
 
 export default async function Page() {
   return (
     <Fragment>
       <div>Users</div>
-      <TRPCSwr />
+      <UserList />
     </Fragment>
   );
 }
