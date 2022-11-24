@@ -3,7 +3,7 @@
  */
 
 import Link from 'next/link';
-import { randomId } from 'random-id';
+import { randomId } from 'randomId';
 
 export async function Header() {
   const links = [

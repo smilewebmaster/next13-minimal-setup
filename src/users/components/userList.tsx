@@ -4,13 +4,13 @@
 
 'use client';
 
-import { client } from 'client';
 import useSWR from 'swr';
+import { trpc } from 'trpc';
 
-const fetcher = () => client.users.query();
+const fetcher = () => trpc.users.query();
 
-export function TRPCSwr() {
-  const { data, error } = useSWR('/user/1', fetcher);
+export function UserList() {
+  const { data, error } = useSWR('users', fetcher);
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;

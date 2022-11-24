@@ -2,11 +2,11 @@
  * BEGIN
  */
 
-import { createTRPCProxyClient, httpBatchLink, loggerLink } from '@trpc/client';
-import { getBaseUrl } from 'base-url';
-import { AppRouter } from 'server';
+import { createTRPCProxyClient, loggerLink, httpBatchLink } from "@trpc/client";
+import { getBaseUrl } from "baseUrl";
+import { AppRouter } from "server";
 
-export const client = createTRPCProxyClient<AppRouter>({
+export const trpc = createTRPCProxyClient<AppRouter>({
   links: [
     loggerLink({
       enabled: (opts) =>
